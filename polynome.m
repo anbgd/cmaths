@@ -1,5 +1,6 @@
-p = [1 -4 -42 104 361 -420];
-derivative(p);
+p = [1 -1 -3 -9] ;
+%derivative(p)
 %my_top(p)
 %my_bot(p)
-secant_method(p)
+%secant_method(p)
+Newtons_method(p)
