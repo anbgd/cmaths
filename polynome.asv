@@ -7,4 +7,4 @@
 %secant_method(p)
 %Newtons_method(p)
 %gor2(p1, -1, 2)
-%der2(p3)
+der2(p3)

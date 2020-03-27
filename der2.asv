@@ -1,0 +1,13 @@
+function [outputArg1,outputArg2] = der2(p)
+[m,n] = size(p);
+derx = zeros(m,n)
+dery = p;
+for i = 1:length(p)
+    str = p(i,:);
+    derivative(str);
+    %derx(i,:) = str;
+end
+outputArg1 = derx;
+outputArg2 = dery;
+end
+
