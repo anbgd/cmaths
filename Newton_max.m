@@ -4,7 +4,8 @@ while (p(end) == 0)
     p(end) = [];
 end
 s = p;
-d = cell(1, length(p)-1);
+d = cell(1, length(p));
+d{1,1} = s;
 for i = 1:(length(p)-1)
     d{1,i} = derivative(s);
     s = derivative(s);
@@ -19,9 +20,6 @@ while (flag == 1)
             flag = 1;
         end
     end    
-end
-while (gorner(p,k) < 0)
-    k = k + 1;
 end
 out = k;
 end
