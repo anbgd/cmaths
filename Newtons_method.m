@@ -13,7 +13,6 @@ x = (a + b)/2;
 while (abs(gorner(p,x) / gorner(derivative(p),x)) >= eps)
     x = x - (gorner(p,x) / gorner(derivative(p),x));
 end
-x = int16(x);
 outputArg1 = x;
 end
 

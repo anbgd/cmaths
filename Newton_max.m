@@ -6,7 +6,7 @@ end
 s = p;
 d = cell(1, length(p));
 d{1,1} = s;
-for i = 1:(length(p)-1)
+for i = 2:(length(p)-1)
     d{1,i} = derivative(s);
     s = derivative(s);
 end

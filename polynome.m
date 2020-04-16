@@ -1,13 +1,14 @@
 %p = [1 -1 -3 -9] ;
 %p1 = [8,0,3,8; 1,7,1,4];
-%p3 =[-1,4,3; 1,3, -4; -4,1, -3];
+p3 =[4,3,0, -3; 1,1,3, -4]  ;
 %derivative(p)
 %my_top(p)
 %my_bot(p)
 p9 = [ -7,  4,  8 ];
-secant_method(p9)
-Newtons_method(p9)
+%secant_method(p9)
+%Newtons_method(p9)
 %gor2(p1, -1, 2)
+der2(p3)
 %der2x(p3)
 %der2y(p3)
 %p4 = [1,4,1, -14, -20, -8];
