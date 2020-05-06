@@ -1,5 +1,5 @@
 function [outputArg1] = my_bot(p)
-
+p = p *sign(p(1));
 q = p;
 
 for i=1:length(p)

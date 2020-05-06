@@ -1,4 +1,5 @@
 function [outputArg1] = my_top(p)
+p = p*sign(p(1));
 a=0;
 flag=1;
 while (flag == 1)
