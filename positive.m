@@ -4,7 +4,6 @@ function bool = positive(pol)
             bool = 0;
             return
         end
-    end
-    
+    end  
     bool = 1;
 end

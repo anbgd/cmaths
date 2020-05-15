@@ -1,3 +1,4 @@
+
 function [x, y] = newton_complex(F, G)
     eps = power(10, -3);
     x = 1;

@@ -1,7 +1,7 @@
 function [out1, out2] = lab3n6 (p)
 min = my_bot(p);
 max = my_top(p);
-n = Shturman(p);
+n = Shturm(p);
 val = zeros(n,1);
 interval = zeros(n,2);
 k = 1; 

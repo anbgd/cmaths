@@ -1,4 +1,4 @@
-function [out] = Shturman (p)
+function [out] = Shturm (p)
 a = Newton_max(p);
 b = my_bot(p);
 d = cell(1, length(p));
