@@ -1,20 +1,28 @@
-function [out] = lab4n2 (matrix1)
-	len = length(matrix1);
-    if (abs(det(matrix1)) < 0.001)
-        out = "Does not exist";
-        return
-    else
-        matrix1(1,1) = 1/matrix1(1,1);
-        a1_1 = matrix1(1,1);
-        for i = 1:len-1
-            a2_1 = matrix1(i+1,1:i);
-            a1_2 = matrix1(1:i,i+1);
-            a2_2 = matrix1(i+1,i+1);
-            X = a1_1*a1_2;
-            Y = a2_1*a1_1;
-            U = a2_2 - Y*a1_2;
-            a1_1 = [a1_1 + X*(1/U)*Y, -X*(1/U);-(1/U)*Y, 1/U];
-        end
-    end
-    out = a1_1;     
+function result = lab4n2(mat)
+       if  m_sz(mat,1) == m_sz(mat,2) && mat(1,1)~=0
+         if size(mat) ~= [1,1]
+           result = lab4n2(mat(1:end-1,1:end-1));
+           if result == 0
+             return
+           end
+           Y = b_matr(mat(end,1:end-1),result);
+           if abs(mat(end,end)-b_matr(Y, mat(1:end-1,end)))>0.000001
+             O = 1/(mat(end,end)-b_matr(Y, mat(1:end-1,end)));
+           else
+             O=0;
+             fprintf('division by 0, so the Invertible matrix does not exist')
+           end
+           X = b_matr(result, mat(1:end-1,end));
+           if O~=0 && m_sz(b_matr(X*O,Y),1)==m_sz(X,1)
+             result = [result+b_matr(X*O,Y), -1*O*X; -1*O*Y,O];
+           else
+             result = 0;
+           end
+         elseif size(mat) == [1,1]
+           result = 1/mat;
+         end
+       else
+         result = 0;
+         fprintf('division by 0, so the Invertible matrix does not exist')
+       end
 end
